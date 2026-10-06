@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Kisutu I, II &amp; III Mangrove Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e3a8a">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mangrove Monitor">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><img src="logo.png" alt="EarthLungs Logo" class="logo-img">Earthlungs-Reforestation-Foundation-Tanzania Mangrove Tool Analysis</div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="app.html">How to Use</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the <span class="highlight">Kisutu I, II &amp; III</span> Mangrove Monitoring System</h1>
+      <p>Real-time mangrove cover, canopy health, burn severity, and restoration-priority monitoring using Google Earth Engine</p>
+      <a href="app.html" class="btn">How to Use System</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Earthlungs Reforestation Foundation Tanzania | Dar es Salaam, Tanzania</p>
+  </footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+          console.log('Service worker registration failed:', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

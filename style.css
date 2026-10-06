@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #1e40af;
+}
+
+.navbar a.active {
+    color: #1e40af;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #60a5fa;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    height: 100vh;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 0 20px;
+}
+
+/* ==================== ABOUT & GENERAL SECTIONS ==================== */
+.about-section, .section {
+    padding: 100px 8%;
+    min-height: 70vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1e3a8a;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 90px;
+    height: 4px;
+    background: #60a5fa;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ==================== PROFILE CARDS ==================== */
+.researcher-profile,
+.supervisor-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.profile-photo {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #1e40af;
+    flex-shrink: 0;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+    color: #1e3a8a;
+    font-size: 2rem;
+}
+
+.profile-info p {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+/* ==================== STEP CARDS (How to Use) ==================== */
+.how-to-use {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.step-card {
+    background: white;
+    padding: 28px 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #1e40af;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(30, 64, 175, 0.15);
+    border-left-color: #60a5fa;
+}
+
+.step-card h3 {
+    color: #1e40af;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    padding-left: 8px;
+}
+
+.step-card p {
+    color: #334155;
+    line-height: 1.7;
+    font-size: 1.02rem;
+}
+
+/* Step Number */
+.step-card::before {
+    content: attr(data-step);
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background: #1e40af;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.3);
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+    background: #1e40af;
+    color: white;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #3b82f6;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4);
+}
+
+/* ==================== FORM STYLES (for Contact page) ==================== */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    transition: all 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Footer */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 3rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .navbar ul {
+        gap: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        gap: 8px;
+    }
+
+    .logo-img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .section, .about-section {
+        padding: 80px 5%;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .researcher-profile,
+    .supervisor-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+}
