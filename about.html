@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Kisutu Mangrove Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="EarthLungs Logo" class="logo-img">Earthlungs-Reforestation-Foundation-Tanzania
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="app.html">How to Use</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <div class="container">
+      <h2>Interpreting the Results</h2>
+
+      <div class="project-description">
+        <p>
+          This tool maps mangrove health and change across Kisutu I, II &amp; III using Sentinel-2
+          satellite imagery. Here's a quick guide to what each layer and chart is telling you.
+        </p>
+
+        <h3>Our Mission</h3>
+        <p>
+          To restore and protect ecosystems, fostering biodiversity and sustainable livelihoods
+          through community-driven restoration and conservation efforts, ensuring a greener,
+          healthier planet for present and future generations.
+        </p>
+
+        <h3>Our Vision</h3>
+        <p>
+          To be a leader in transforming Africa into a green, sustainable, and climate-resilient
+          continent.
+        </p>
+
+        <h3>Vegetation Health (NDVI &amp; EVI)</h3>
+        <p>
+          Darker green means denser, healthier vegetation; white, yellow, and brown mean sparse or
+          stressed vegetation. <strong>NDVI change</strong> shows where things got greener (green)
+          or declined (red) between two dates.
+        </p>
+
+        <h3>Canopy Density Class</h3>
+        <p>
+          Yellow = sparse canopy, light green = moderate, dark green = dense — a simple three-class
+          summary of the EVI layer above.
+        </p>
+
+        <h3>Burn Severity</h3>
+        <p>
+          Comparing a date before and after a fire: blue shades mean the area is regrowing,
+          green means unburned, and yellow → orange → dark red means increasing burn severity.
+        </p>
+
+        <h3>Mangrove Coverage &amp; Change</h3>
+        <p>
+          Dark green marks current mangrove extent. On the <strong>change</strong> layer:
+          red = lost mangrove, green = stable mangrove, yellow = new/gained mangrove, compared
+          against the 2016–17 baseline.
+        </p>
+
+        <h3>Restoration Priority</h3>
+        <p>
+          For areas that lost mangrove, this ranks how urgently they need help: red = high
+          priority (little natural recovery), orange = moderate, yellow = low priority
+          (already regrowing on its own).
+        </p>
+
+        <h3>Reading the Charts</h3>
+        <p>
+          Whenever a run produces a bar chart, it appears in its own panel on the map (top-right,
+          above the legend) using the same colors as the legend — so the chart and the map always
+          agree on what each color means.
+        </p>
+
+        <h3>Technology</h3>
+        <p>
+          The entire workflow is powered by <strong>Google Earth Engine</strong> and uses only
+          the <code>COPERNICUS/S2_SR_HARMONIZED</code> collection (Level-2A surface reflectance).
+          Cloud and shadow masking is performed with the Scene Classification Layer (SCL). All
+          map layers, legends, charts, and the interactive analysis panel are generated
+          client-side from the same carefully optimized script, ensuring consistency between
+          static products and on-demand runs.
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2026 Earthlungs Reforestation Foundation Tanzania | Dar es Salaam, Tanzania</p>
+  </footer>
+</body>
+</html>
