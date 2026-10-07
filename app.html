@@ -19,53 +19,54 @@
 
   <section class="section">
     <div class="container">
-      <h2>How to Use the Kisutu I, II &amp; III Mangrove Monitoring System</h2>
+      <h2>How to Use the System</h2>
 
       <p style="text-align: center; font-size: 1.2rem; max-width: 900px; margin: 0 auto 50px;">
         Follow these simple steps to explore mangrove cover, canopy health, burn severity,
-        and restoration priority across the Kisutu 1, 2 and 3 area using Google Earth Engine.
+        and restoration priority across the Tanzania Sites area using Google Earth Engine.
       </p>
+<div class="how-to-use">
 
-      <div class="how-to-use">
+  <div class="step-card" data-step="1">
+    <h3>Step 1: Set the Date Range</h3>
+    <p>In the "Tanzania Sites Analysis" panel, set the <strong>Start date</strong>
+       and <strong>End date</strong> (YYYY-MM-DD).<br>
+       This defines the period for which the satellite data will be processed.</p>
+  </div>
 
-        <div class="step-card" data-step="2">
-          <h3>Step 1: Select Your Date Range</h3>
-          <p>In the "Run Custom Analysis" panel, set a <strong>Start</strong> and <strong>End</strong> date.
-             For a single snapshot (NDVI, EVI, mangrove coverage), both dates define one composite window.
-             For a change analysis, Start is treated as the "before" date and End as the "after" date.</p>
-        </div>
+  <div class="step-card" data-step="2">
+    <h3>Step 2: Choose a Layer</h3>
+    <p>Select the analysis layer from the dropdown menu. The available layers include:<br>
+       • <strong>NDVI</strong> – vegetation health<br>
+       • <strong>EVI</strong> – canopy density<br>
+       • <strong>NBR</strong> – burn severity<br>
+       • <strong>MNDWI</strong> – water and land separation<br>
+       • Mangrove coverage<br>
+       • Mangrove change<br>
+       • Restoration priority<br>
+       All layers are built from Sentinel-2 imagery.</p>
+  </div>
 
-        <div class="step-card" data-step="3">
-          <h3>Step 2: Select an Analysis Type</h3>
-          <p>Choose what you want to map from the dropdown:<br>
-             • NDVI (single period) or NDVI change (Start vs End)<br>
-             • EVI – canopy density (single period)<br>
-             • Burn severity class (Start = pre-fire, End = post-fire)<br>
-             • Mangrove coverage (single period)<br>
-             • Mangrove change (Start vs End) — loss / stable / gain<br>
-             • Mangrove restoration priority (Start = baseline, End = current)<br>
-             All layers are built from Sentinel-2 (2016 – present) surface reflectance imagery.
-          </p>
-        </div>
+  <div class="step-card" data-step="3">
+    <h3>Step 3: Set Cloud Cover (Optional)</h3>
+    <p>Use the slider to set the maximum cloud cover <strong>percentage</strong>.
+       Lower values give clearer results, while higher values include more data.</p>
+  </div>
 
-        <div class="step-card" data-step="4">
-          <h3>Step 3: Run the Analysis</h3>
-          <p>Click <strong>"Run Analysis"</strong> and wait while the system processes the satellite data —
-             the button is replaced with a "Running analysis, please wait…" indicator until the result
-             is ready.</p>
-        </div>
+  <div class="step-card" data-step="4">
+    <h3>Step 4: Select the Area to Display</h3>
+    <p>Choose the area you want to analyze. You can select
+       <strong>"ALL AREAS"</strong> or a specific region from the dropdown.</p>
+  </div>
 
-        <div class="step-card" data-step="5">
-          <h3>Step 5: View the Results</h3>
-          <p>The new layer appears on the map with its legend (bottom-right). Where an analysis produces
-             a summary chart — mangrove coverage, mangrove change, burn severity, or restoration
-             priority — that chart also opens in its own panel (top-right, above the legend), and can
-             be dismissed with its "Close chart" button. Use Earth Engine's built-in Layers control
-             (top-right) to toggle any layer on or off.</p>
-        </div>
+  <div class="step-card" data-step="5">
+    <h3>Step 5: Update the Map</h3>
+    <p>Click the <strong>"Update map"</strong> button. The system will process the data
+       and display the selected layer on the map with its legend and, where available,
+       a summary chart.</p>
+  </div>
 
-
-      </div>
+</div>
 
       <!-- Centered Big Button -->
       <div style="text-align: center; margin: 60px 0 40px 0;">
@@ -85,7 +86,7 @@
         <li>For change analyses, pick a Start and End date that bracket the event or period you want
             to study (e.g. before and after a known fire, or a baseline year vs. today).</li>
         <li>Compare multiple date-range runs to observe how mangrove cover and restoration needs
-            change over time across Kisutu I, II and III.</li>
+            change over time across Tanzania Sites.</li>
         <li>Make sure you have a stable internet connection, since each run queries Earth Engine
             in real time.</li>
       </ul>
