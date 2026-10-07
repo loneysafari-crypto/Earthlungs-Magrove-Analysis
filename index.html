@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home -Earthlungs Tanzania Sites For Magrove Analysis and Restoration</title>
+  <title>Home - Earthlungs Tanzania Sites for Mangrove Analysis and Restoration</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e3a8a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Mangrove Monitor">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 </head>
 <body>
 
   <nav class="navbar">
-    <div class="logo"><img src="logo.png" alt="EarthLungs Logo" class="logo-img">Earthlungs-Reforestation-Foundation-Tanzania </div>
+    <div class="logo"><img src="logo.png" alt="EarthLungs Logo" class="logo-img">Earthlungs-Reforestation-Foundation-Tanzania</div>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -19,7 +27,7 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Welcome to the <span class="highlight">Earthlungs Tanzania Sites For Magrove Analysis, Restoration</span> &amp; Monitoring System</h1>
+      <h1>Welcome to the <span class="highlight">Earthlungs Tanzania Sites for Mangrove Analysis, Restoration</span> &amp; Monitoring System</h1>
       <p>Real-time mangrove cover, canopy health, burn severity, and restoration-priority monitoring using Google Earth Engine</p>
       <a href="app.html" class="btn">How to Use System</a>
     </div>
@@ -28,5 +36,13 @@
   <footer>
     <p>&copy; 2026 Earthlungs Reforestation Foundation Tanzania | Dar es Salaam, Tanzania</p>
   </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(console.error);
+      });
+    }
+  </script>
 </body>
 </html>
