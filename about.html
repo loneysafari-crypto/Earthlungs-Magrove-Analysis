@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Kisutu Mangrove Monitor</title>
+  <title>About - Mangrove Health Analysis System</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="EarthLungs Logo" class="logo-img">Earthlungs-Reforestation-Foundation-Tanzania
+      <img src="logo.png" alt="Earthlungs Reforestation Foundation Tanzania Logo" class="logo-img">
+      Earthlungs Reforestation Foundation Tanzania
     </div>
+
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
@@ -18,83 +23,173 @@
     </ul>
   </nav>
 
+  <!-- About Section -->
   <section class="about-section">
     <div class="container">
-      <h2>Interpreting the Results</h2>
+
+      <h2>About the Mangrove Health Analysis System</h2>
 
       <div class="project-description">
+
         <p>
-          This tool maps mangrove health and change across Kisutu I, II &amp; III using Sentinel-2
-          satellite imagery. Here's a quick guide to what each layer and chart is telling you.
+          The <strong>Mangrove Health Analysis System</strong> is a geospatial
+          monitoring tool designed to support the assessment of mangrove
+          vegetation health, water extent and environmental changes across
+          selected mangrove restoration sites in Tanzania.
         </p>
 
+        <p>
+          The system uses <strong>Sentinel-2 satellite imagery</strong> and
+          Google Earth Engine to generate vegetation, water, and burn-related
+          indicators. These results help users understand mangrove conditions,
+          identify areas of degradation and support restoration and
+          conservation planning.
+        </p>
+
+        <!-- Mission -->
         <h3>Our Mission</h3>
+
         <p>
-          To restore and protect ecosystems, fostering biodiversity and sustainable livelihoods
-          through community-driven restoration and conservation efforts, ensuring a greener,
-          healthier planet for present and future generations.
+          To restore and protect ecosystems, promote biodiversity, and support
+          sustainable livelihoods through community-driven restoration and
+          conservation efforts, contributing to a greener and healthier planet
+          for present and future generations.
         </p>
 
+        <!-- Vision -->
         <h3>Our Vision</h3>
+
         <p>
-          To be a leader in transforming Africa into a green, sustainable, and climate-resilient
-          continent.
+          To become a leader in transforming Africa into a greener, more
+          sustainable, and climate-resilient continent through innovative
+          environmental restoration, technology and community participation.
         </p>
 
-        <h3>Vegetation Health (NDVI &amp; EVI)</h3>
+        <!-- NDVI -->
+        <h3>NDVI – Vegetation Health</h3>
+
         <p>
-          Darker green means denser, healthier vegetation; white, yellow, and brown mean sparse or
-          stressed vegetation. <strong>NDVI change</strong> shows where things got greener (green)
-          or declined (red) between two dates.
+          The <strong>Normalized Difference Vegetation Index (NDVI)</strong>
+          measures vegetation greenness and provides an indication of
+          vegetation health and density. Higher NDVI values generally indicate
+          healthier and denser vegetation, while lower values may represent
+          sparse vegetation, bare surfaces, mud or water.
         </p>
 
-        <h3>Canopy Density Class</h3>
         <p>
-          Yellow = sparse canopy, light green = moderate, dark green = dense — a simple three-class
-          summary of the EVI layer above.
+          In mangrove ecosystems, NDVI can help identify vegetation extent,
+          assess vegetation condition and monitor changes in mangrove areas
+          over time.
         </p>
 
+        <!-- EVI -->
+        <h3>EVI – Enhanced Vegetation Health</h3>
+
+        <p>
+          The <strong>Enhanced Vegetation Index (EVI)</strong> is used to
+          evaluate vegetation condition and canopy density. Compared with NDVI,
+          EVI can provide improved sensitivity in areas with dense vegetation
+          and can reduce some effects caused by atmospheric conditions and
+          background reflectance.
+        </p>
+
+        <p>
+          For mangrove monitoring, EVI can help distinguish areas of sparse,
+          moderate and dense vegetation and support the assessment of canopy
+          condition.
+        </p>
+
+        <!-- NBR -->
+        <h3>NBR – Burn and Vegetation Disturbance</h3>
+
+        <p>
+          The <strong>Normalized Burn Ratio (NBR)</strong> is used to identify
+          fire-related disturbance and significant changes in vegetation
+          structure. Comparing NBR values before and after an event can help
+          identify areas affected by fire, vegetation loss or other major
+          disturbances.
+        </p>
+
+        <!-- MNDWI -->
+        <h3>MNDWI – Water and Land Separation</h3>
+
+        <p>
+          The <strong>Modified Normalized Difference Water Index (MNDWI)</strong>
+          helps distinguish water from land surfaces. This is particularly
+          useful in mangrove environments because mangroves are commonly
+          located along coastlines, tidal channels, wetlands and other
+          water-associated environments.
+        </p>
+
+        <p>
+          MNDWI can be used together with vegetation indices such as NDVI and
+          EVI to improve the identification of mangrove areas and reduce
+          confusion between vegetation, water, mud and other surfaces.
+        </p>
+
+        <!-- Burn Severity -->
         <h3>Burn Severity</h3>
+
         <p>
-          Comparing a date before and after a fire: blue shades mean the area is regrowing,
-          green means unburned, and yellow → orange → dark red means increasing burn severity.
+          The burn severity layer helps visualize areas affected by fire or
+          vegetation disturbance. The colors represent different levels of
+          disturbance and recovery:
         </p>
 
-        <h3>Mangrove Coverage &amp; Change</h3>
-        <p>
-          Dark green marks current mangrove extent. On the <strong>change</strong> layer:
-          red = lost mangrove, green = stable mangrove, yellow = new/gained mangrove, compared
-          against the 2016–17 baseline.
-        </p>
+        <ul>
+          <li><strong>Blue:</strong> Areas showing signs of vegetation recovery.</li>
+          <li><strong>Green:</strong> Areas with little or no detected burn disturbance.</li>
+          <li><strong>Yellow:</strong> Areas showing moderate disturbance.</li>
+          <li><strong>Orange:</strong> Areas showing high disturbance.</li>
+          <li><strong>Dark Red:</strong> Areas showing severe vegetation damage.</li>
+        </ul>
 
-        <h3>Restoration Priority</h3>
-        <p>
-          For areas that lost mangrove, this ranks how urgently they need help: red = high
-          priority (little natural recovery), orange = moderate, yellow = low priority
-          (already regrowing on its own).
-        </p>
-
-        <h3>Reading the Charts</h3>
-        <p>
-          Whenever a run produces a bar chart, it appears in its own panel on the map (top-right,
-          above the legend) using the same colors as the legend — so the chart and the map always
-          agree on what each color means.
-        </p>
-
+        <!-- Technology -->
         <h3>Technology</h3>
+
         <p>
-          The entire workflow is powered by <strong>Google Earth Engine</strong> and uses only
-          the <code>COPERNICUS/S2_SR_HARMONIZED</code> collection (Level-2A surface reflectance).
-          Cloud and shadow masking is performed with the Scene Classification Layer (SCL). All
-          map layers, legends, charts, and the interactive analysis panel are generated
-          client-side from the same carefully optimized script, ensuring consistency between
-          static products and on-demand runs.
+          The system is powered by <strong>Google Earth Engine (GEE)</strong>
+          and uses the
+          <code>COPERNICUS/S2_SR_HARMONIZED</code> Sentinel-2 Surface
+          Reflectance dataset (Level-2A).
         </p>
+
+        <p>
+          Cloud and shadow masking is performed using the
+          <strong>Scene Classification Layer (SCL)</strong>. The system
+          processes satellite imagery to generate vegetation, water and
+          disturbance indicators for mangrove monitoring.
+        </p>
+
+        <p>
+          The interactive maps, legends, charts and analysis panels are
+          generated from the same processing workflow to maintain consistency
+          between the displayed results and the underlying analysis.
+        </p>
+
+        <!-- GIS and Remote Sensing -->
+        <h3>GIS, Remote Sensing and Environmental Monitoring</h3>
+
+        <p>
+          By integrating <strong>GIS, Remote Sensing, satellite imagery, and
+          environmental analysis</strong>, this system provides an accessible
+          way to explore mangrove conditions and environmental changes.
+          The results can support field teams, researchers, conservation
+          organizations, restoration practitioners and decision-makers in
+          planning and monitoring mangrove restoration activities.
+        </p>
+
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Earthlungs Reforestation Foundation Tanzania | Dar es Salaam, Tanzania</p>
+    <p>
+      &copy; 2026 Earthlungs Reforestation Foundation Tanzania |
+      Dar es Salaam, Tanzania
+    </p>
   </footer>
+
 </body>
 </html>
